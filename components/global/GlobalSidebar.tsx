@@ -19,7 +19,6 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
@@ -66,7 +65,7 @@ const items = [
 const GlobalSidebar = () => {
   const {state} = useSidebar() // state from sidebar context to determine if the sidebar is collapsed or not.
   const pathname = usePathname()
-  const isCollapsed = state === "collapsed" // this sets the variable to collapsed based on the status of the sidebar.
+  const isCollapsed = state === "collapsed" ? state : null // this sets the variable to collapsed based on the status of the sidebar.
 
   return (
     <Sidebar>
