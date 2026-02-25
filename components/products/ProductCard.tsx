@@ -8,7 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { EllipsisVertical, Eye } from "lucide-react"
+import { Eye } from "lucide-react"
+import ProductCardDropdown from "./ProductCardDropdown"
 
 interface ProductCardProps {
   product: {
@@ -31,13 +32,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
         className="relative z-20 aspect-video w-full object-cover brightness-60 
         grayscale dark:brightness-40 rounded-tr-lg rounded-tl-lg"
       />
+
       <CardHeader>
         <CardAction>
-          <Button variant="outline" 
-            className="rounded-full flex items-center justify-center cursor-pointer p-2 h-6 w-6"
-          >
-           <EllipsisVertical color="black"/>
-          </Button>
+          <ProductCardDropdown/>
         </CardAction>
         <CardTitle className="line-clamp-3 md:line-clamp-2">{product.title}</CardTitle>
         <CardDescription className="line-clamp-3">
@@ -52,11 +50,13 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </Badge>
         </div>
       </CardHeader>
+
       <CardFooter>
         {/* BUTTON FOR DESKTOPS  */}
         <Button className="lg:visible w-[84%] absolute bottom-2 group" variant="outline">
           {/* This span will be used for animation when hovering on the button  */}
-          <span className="transition-[width] ease-in-out bg-black/80 w-0 z-99 absolute left-0 h-full rounded-md group-hover:w-full cursor-pointer"></span>
+          <span className="transition-[width] ease-in-out bg-black/80 w-0 z-99 
+            absolute left-0 h-full rounded-md group-hover:w-full cursor-pointer"></span>
           <span className="group-hover:z-99 flex items-center gap-1 group-hover:text-white transition-colors ease-in-out cursor-pointer">
             View Details
             <Eye/>
