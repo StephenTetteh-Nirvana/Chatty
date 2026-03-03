@@ -24,7 +24,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
-    <Card className="relative mx-auto w-full max-w-sm pt-0 rounded-lg">
+    <Card className="transition-all ease-in-out relative mx-auto w-full max-w-sm pt-0 rounded-lg">
       <div className="absolute inset-0 z-30 aspect-video bg-black/25 rounded-tr-lg rounded-tl-lg" />
       <img
         src={product.image}
@@ -60,7 +60,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <span className="group-hover:z-99 flex items-center gap-1 group-hover:text-white transition-colors ease-in-out cursor-pointer">
             View Details
             <Eye/>
-          </span>
+          </span>  
         </Button>
 
         {/* BUTTON FOR MOBILE AND TABLETS  */}

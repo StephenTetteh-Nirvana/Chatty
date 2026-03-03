@@ -1,20 +1,18 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
+import { useMainContext } from "@/context/MainContext"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { useMainContext } from "@/context/MainContext"
 
 import {
   EllipsisVertical,
-  LogOutIcon,
   SquarePen,
   Trash2Icon,
-  UserIcon,
 } from "lucide-react"
 
 
@@ -27,7 +25,7 @@ const ProductCardDropdown = () => {
         <Button variant="outline" 
           className="rounded-full flex items-center justify-center cursor-pointer p-2 h-6 w-6"
         >
-           <EllipsisVertical color="black"/>
+          <EllipsisVertical color="black"/>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>

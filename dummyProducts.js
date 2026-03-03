@@ -1,12 +1,12 @@
 export const dummyProducts = [{
     id: 1,
-    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    price: 109.95,
-    stock: 0,
+    title: "Mens Casual Slim Fit",
+    price: 15.99,
+    stock: 120,
     category: "men's clothing",
     description:
-      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve.",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+      "Casual slim fit design. Please review size details carefully before purchase.",
+    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
   },
   {
     id: 2,
@@ -29,14 +29,14 @@ export const dummyProducts = [{
     image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
   },
   {
-    id: 4,
-    title: "Mens Casual Slim Fit",
-    price: 15.99,
-    stock: 120,
+   id: 4,
+    title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    price: 109.95,
+    stock: 0,
     category: "men's clothing",
     description:
-      "Casual slim fit design. Please review size details carefully before purchase.",
-    image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve.",
+    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
   },
   {
     id: 5,
@@ -58,4 +58,5 @@ export const dummyProducts = [{
     description:
       "Designed and sold in the United States. Satisfaction guaranteed within 30 days.",
     image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png",
-  }]
+  }
+]
