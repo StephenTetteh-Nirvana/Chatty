@@ -17,7 +17,7 @@ import {
 
 
 const ProductCardDropdown = () => {
-  const {setShowDeleteCard} = useMainContext()
+  const {setShowDeleteCard,setEditCardData} = useMainContext()
 
   return (
     <DropdownMenu>
@@ -29,7 +29,10 @@ const ProductCardDropdown = () => {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem className="cursor-pointer">
+        <DropdownMenuItem 
+          className="cursor-pointer"
+          onClick={()=>setEditCardData(true)}
+        >
           <SquarePen/>
           Edit
         </DropdownMenuItem>

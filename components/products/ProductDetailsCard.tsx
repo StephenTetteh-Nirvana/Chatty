@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -6,30 +8,33 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useMainContext } from "@/context/MainContext"
 
 const ProductDetailsCard = () => {
+  const {setEditCardData} = useMainContext()
+
   return (
     <Card 
       className="mx-auto w-full max-w-sm"
     >
       <CardHeader>
-        <CardTitle>Delete Product</CardTitle>
+        <CardTitle className="text-xl">Edit Product</CardTitle>
         <CardDescription>
-          Are you sure you want to delete this product? This action cannot be undone.
+          Update your product details here. Make sure to save your changes before exiting.
         </CardDescription>
       </CardHeader>
       <CardFooter className="flex flex-col gap-2">
-        <Button 
-          variant="destructive" 
+        <Button  
           size="sm" 
-          className="w-full cursor-pointer"
+          className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700"
         >
-          Delete
+          Save Changes
         </Button>
         <Button 
           variant="outline" 
           size="sm"
           className="w-full cursor-pointer"
+          onClick={()=>setEditCardData(false)}
         >
           Cancel
         </Button>
