@@ -1,19 +1,21 @@
 import { Button } from "@/components/ui/button"
 import {
   Field,
-  FieldDescription,
   FieldGroup,
   FieldLabel,
-  FieldLegend,
-  FieldSeparator,
   FieldSet,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { product } from "@/types/types"
 
-const EditProductForm = () => {
+interface EditProductFormProps{
+    product: product | undefined
+}
+
+const EditProductForm = ({product}: EditProductFormProps) => {
   return (
-    <div className="w-full max-w-md mt-5 py-4">
+    <div className="w-full mt-5 py-4">
       <form>
         <FieldGroup>
           <FieldSet>
@@ -28,6 +30,8 @@ const EditProductForm = () => {
                   id="product-name"
                   placeholder="Black Tee"
                   required
+                  value={product?.title}
+                  className="font-semibold text-slate-600"
                 />
               </Field>
               <Field>
@@ -40,6 +44,8 @@ const EditProductForm = () => {
                   id="product-price"
                   placeholder="$0.00"
                   required
+                  value={`$ ${product?.price}`}
+                  className="font-semibold text-slate-600"
                 />
               </Field>
               <Field>
@@ -52,6 +58,8 @@ const EditProductForm = () => {
                   id="product-stock"
                   placeholder="Number of pieces available"
                   required
+                  value={`${product?.stock} available`}
+                  className="font-semibold text-slate-600"
                 />
               </Field>
             </FieldGroup>
@@ -67,16 +75,14 @@ const EditProductForm = () => {
                 <Textarea
                   id="product-description"
                   placeholder="Add product description here..."
-                  className="resize-none"
+                  className="resize-none font-semibold text-slate-600"
+                  value={product?.description}
                 />
               </Field>
             </FieldGroup>
           </FieldSet>
-          <Field orientation="horizontal">
+          <Field >
             <Button type="submit" className="bg-[#2666CF] hover:bg-[#2666CF] hover:cursor-pointer">Update</Button>
-            <Button variant="outline" type="button">
-              Cancel
-            </Button>
           </Field>
         </FieldGroup>
       </form>

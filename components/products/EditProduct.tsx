@@ -37,7 +37,7 @@ const EditProduct = () => {
           )}
         
         {/* PRODUCT DETAILS FORM  */}
-        <EditProductForm/>
+        <EditProductForm product={foundProduct}/>
       </div>
       </div>
     )
