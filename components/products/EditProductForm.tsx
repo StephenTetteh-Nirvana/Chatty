@@ -15,7 +15,7 @@ interface EditProductFormProps{
 
 const EditProductForm = ({product}: EditProductFormProps) => {
   return (
-    <div className="w-full mt-5 py-4">
+    <div className="w-full mt-5 md:mt-0 py-4 md:py-0">
       <form>
         <FieldGroup>
           <FieldSet>

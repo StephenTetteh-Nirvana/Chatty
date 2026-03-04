@@ -12,15 +12,14 @@ const EditProduct = () => {
     console.log("foundProduct:", foundProduct)
 
     return (
-      <div className="flex flex-col gap-2">
-        {/* IMAGE SECTION  */}
-        <div className="mt-3">
+      <div className="w-full">
+        <div className="mt-3 flex flex-col gap-2 md:flex-row md:gap-4">
           {foundProduct?.image ? (
-            <div className="bg-slate-200 h-70 w-full rounded-lg flex items-center justify-center rounded-lg">
+            <div className="bg-slate-200 h-70 lg:h-[65vh] w-full rounded-lg flex items-center justify-center rounded-lg">
               <img
                 src={foundProduct?.image}
                 alt={foundProduct?.title || "Product Image"}
-                className="w-full rounded-lg  w-full h-62 object-contain"
+                className="w-full rounded-lg w-full h-62  md:h-full object-contain"
               />
             </div>
           )
