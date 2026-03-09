@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Plus } from "lucide-react"
+import CategoriesTable from "@/components/categories/CategoriesTable"
 
 const page = () => {
     return (
@@ -20,6 +21,9 @@ const page = () => {
             </Button>
           </div>
         </div>
+
+        {/* CATEGORIES TABLE  */}
+        <CategoriesTable/>
       </div>
     )
 }
