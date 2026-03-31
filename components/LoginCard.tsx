@@ -16,8 +16,6 @@ import { Label } from "@/components/ui/label"
 import { Spinner } from "@/components/ui/spinner"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-import LoginImage from "@/public/loginPicture.jpg"
-
 
 const LoginCard = () => {
   const router = useRouter()
@@ -48,17 +46,18 @@ const LoginCard = () => {
   }
 
   return (
-    <main className="flex flex-col sm:flex-col md:flex-row min-h-full w-full">
+    <main className="flex min-h-full w-full">
       {/* FIRST SECTION WITH FORM  */}
       <div className="w-full flex flex-col gap-2 flex-1 justify-center items-center py-3">
-        <div>
-          {/* <Image
-            src="/logo.png"
+        <div className="flex items-center gap-2">
+          <Image
+            src="/images/logo.png"
             alt="Logo Picture"
-            width={70}
-            height={70}
+            width={500}
+            height={500}
+            className="w-auto h-auto "
           />
-          <h1 className=" text-2xl">Chatty</h1> */}
+          <h1 className=" text-xl font-bold">EliteFits</h1>
         </div>
         <Card className="w-full max-w-sm">
           <CardHeader>
@@ -107,18 +106,27 @@ const LoginCard = () => {
                 Login
               </Button>
             }
+
+            {/* Dummy credentials for testing */}
+            <div className="flex flex-col text-slate-700 text-[14px]">
+              <h1 className="">Use these credentials to login:</h1>
+              <div>
+                <p>Email: admin</p>
+                <p>Password: 123</p>
+              </div>
+            </div>
           </CardFooter>
         </Card>
       </div>
 
       {/* SECOND SECTION WITH IMAGE  */}
-      <div className="flex flex-1 justify-center items-center">
+      {/* <div className="flex flex-1 justify-center items-center">
         <Image
           src={LoginImage}
           alt="loginPicture"
           className="w-full min-h-screen"
         />
-      </div>
+      </div> */}
     </main>
 
   )
